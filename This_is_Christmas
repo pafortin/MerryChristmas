@@ -1,0 +1,39 @@
+(function () {
+    // Texte à afficher crypté en Base64
+    const encryptedCode = "Q29kZTogI1RURFRUVGNocmlzdG1hczIwMjQ=";
+
+    // Fonction de décryptage Base64
+    function decryptBase64(encodedText) {
+        return atob(encodedText);
+    }
+
+    // Fonction pour dessiner l'arbre de Noël
+    function drawChristmasTree() {
+        const treeHeight = 10; // Hauteur de l'arbre
+
+        // Dessiner l'arbre en vert
+        for (let i = 0; i < treeHeight; i++) {
+            const spaces = ' '.repeat(treeHeight - i - 1);
+            const stars = '*'.repeat(i * 2 + 1);
+            console.log(`%c${spaces + stars}`, 'color: green');
+        }
+
+        // Dessiner le tronc en vert
+        const trunkWidth = 3;
+        const trunkHeight = 2;
+        const trunkPadding = ' '.repeat(treeHeight - Math.floor(trunkWidth / 2) - 1);
+        for (let i = 0; i < trunkHeight; i++) {
+            console.log(`%c${trunkPadding + '|'.repeat(trunkWidth)}`, 'color: green');
+        }
+
+        // Afficher "Merry Christmas!" en rouge
+        console.log('%c\nMerry Christmas!', 'color: red; font-size: 16px; font-weight: bold');
+
+        // Décrypter et afficher le code caché
+        const decryptedCode = decryptBase64(encryptedCode);
+        console.log(`%c${decryptedCode}`, 'color: red; font-style: italic');
+    }
+
+    // Appeler la fonction pour dessiner l'arbre
+    drawChristmasTree();
+})();
