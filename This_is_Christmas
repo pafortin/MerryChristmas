@@ -1,5 +1,5 @@
 (function () {
-    const encryptedCode = "Q29kZTogI1RURFRUVGNocmlzdG1hczIwMjQ=";
+    const encryptedCode = "I1RURFRUVGNocmlzdG1hczIwMjQ=";
     function decryptBase64(encodedText) {
         return atob(encodedText);
     }
