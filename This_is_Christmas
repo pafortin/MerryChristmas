@@ -16,7 +16,7 @@
         for (let i = 0; i < trunkHeight; i++) {
             console.log(`%c${trunkPadding + '|'.repeat(trunkWidth)}`, 'color: green');
         }
-        console.log('%c\nMerry Christmas!', 'color: red; font-size: 16px; font-weight: bold');
+        console.log('%c\nMerry Christmas!\n the code is :', 'color: red; font-size: 16px; font-weight: bold');
         const decryptedCode = decryptBase64(encryptedCode);
         console.log(`%c${decryptedCode}`, 'color: red; font-style: italic');
     }
